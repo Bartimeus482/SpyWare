@@ -1,0 +1,13 @@
+Déclencher un key listener
+
+Key listener :
+(Ouvrir en fichier en mode écriture/ajout (a))
+Si "Enter pressé", ajouter \n à la ligne
+
+Envoi de fichier :
+Envoyer les bytes si possibles
+https://stackoverflow.com/questions/50852062/send-byte-over-tcp-python
+https://www.developpez.net/forums/d555140/autres-langages/python/reseau-web/envoyer-bytes-via-socket/
+
+openssl pour chiffrer le trafic
+faire une nouvelle clé privée pour chaque keylogger

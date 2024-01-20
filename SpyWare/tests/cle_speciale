@@ -1,0 +1,56 @@
+def cle_speciale(char):
+    if "enter" in char:
+        file_open('\n')
+    if "space" in char:
+        file_open(' ')
+    if "backspace" in char:
+        with open(ficname, 'rb+') as fic:
+            fic.seek(0, os.SEEK_END)
+            size = fic.tell()
+            fic.seek(size - 1)
+            content = fic.read()
+            print("Content before truncate:", content)
+            fic.truncate()
+            fic.seek(0)
+            content = fic.read()
+            print("Content after truncate:", content)
+    '''if "backspace" in char:
+        with open(ficname, 'r') as old_fic:
+            data = old_fic.read()[:-1]
+        # Create a file-like object in memory
+        fake_file = io.StringIO(data)
+        with open(ficname, 'w') as new_fic:
+            shutil.copyfileobj(fake_file, new_fic)'''
+    '''if "backspace" in char:
+        with open(ficname,'r') as old_fic:
+            data = old_fic.read()[:-1]
+            print(data)
+        with open(ficname+'.tmp','w') as new_fic:
+            new_fic.write(data)
+        shutil.move(ficname+'.tmp',ficname)'''
+    '''if "backspace" in char:
+        with open(ficname,'r') as old_fic:
+            data = old_fic.read()[:-1]
+            print(data)
+        with io.StringIO(data) as file_in_memory:
+            with open(ficname,'w') as new_fic:
+                new_fic.write(file_in_memory.read())'''
+    '''if "backspace" in char:
+        with open(ficname,'rb+') as fic:
+            fic.seek(-1,2)
+            fic.truncate()'''
+    '''
+    if "backspace" in char:
+        with open(ficname,'r') as old_fic:
+            data = old_fic.read()[:-1]
+            print(data)
+        with open(ficname,'w') as new_fic:
+            new_fic.write(data)'''
+    if "caps" in char: # touche majuscule
+        return -1
+    if "tab" in char:
+        file_open('\t')
+    if "shift" in char:
+        file_open('{Shift}')
+    if "esc" in char:
+        file_open('{Echap}')
